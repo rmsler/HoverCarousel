@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box
+}
+
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+}
+
+.slides {
+  display: none
+}
+
+img {
+  vertical-align: middle;
+}
+
+.carrousel-wrapper {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  padding-top: 50px;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-weight: bolder;
+  font-size: 25px;
+  padding: 25px 12px;
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+  text-align: center;
+}
+
+.dots-wrapper {
+  display: flex;
+  margin: 15px 43%;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 5%;
+  display: flex;
+  transition: background-color 0.6s ease;
+  text-align: center;
+  font-size:140%;
+  padding-left: 8px;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+
+  .text {
+    font-size: 11px
+  }
+}
